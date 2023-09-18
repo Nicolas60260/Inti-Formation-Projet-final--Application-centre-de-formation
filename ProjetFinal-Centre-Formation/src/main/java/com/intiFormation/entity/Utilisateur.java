@@ -29,6 +29,12 @@ public class Utilisateur extends Personne{
 	public String getPassword() {
 		return password;
 	}
+	public Role getRole() {
+		return role;
+	}
+	public void setRole(Role role) {
+		this.role = role;
+	}
 	public int getId() {
 		return id;
 	}
@@ -38,18 +44,13 @@ public class Utilisateur extends Personne{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Utilisateur(int id, String mail, String nom, String prenom, Long telephone, String username,
-			String password) {
-		super(id, mail, nom, prenom, telephone);
-		this.username = username;
-		this.password = password;
-	}
 	public Utilisateur(int id, String mail, String nom, String prenom, Long telephone, int id2, String username,
-			String password) {
+			String password, Role role) {
 		super(id, mail, nom, prenom, telephone);
 		id = id2;
 		this.username = username;
 		this.password = password;
+		this.role = role;
 	}
 	public Utilisateur() {
 		super();
